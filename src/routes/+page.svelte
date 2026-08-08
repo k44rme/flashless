@@ -4,7 +4,7 @@
 </script>
 
 <Decorations />
-<main style:height="90dvh">
+<main style:height="95dvh">
     <div class="paint-tools-bar">
         toolbar
     </div>
@@ -21,19 +21,20 @@
 <style lang="sass">
 
     main
-        width: 90%
+        width: 95%
         margin: 0 auto
 
         display: flex
         flex-direction: column
 
         gap: 10px
+        vertical-align: middle
 
     .main-region
         display: grid
         grid-template-columns: 2fr 1fr
         gap: 10px
-        height: 70dvh
+        height: 80dvh
 
     .paint-tools-bar, .paint-region, .properties-bar
         background-color: #fff
