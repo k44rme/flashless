@@ -12,13 +12,28 @@
   "app": {
     "windows": [
       {
-        "title": "flashless",
-        "width": 800,
-        "height": 600
+        "title": "Main - Flashless",
+        "minWidth": 800,
+        "minHeight": 600,
+        "fullscreen": false,
+        "decorations": false
       }
     ],
     "security": {
-      "csp": null
+      "csp": {
+				"default-src": "'self'",
+				"img-src": "'self' asset: http://asset.localhost data: blob:",
+				"style-src": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+				"style-src-elem": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+				"font-src": "'self' https://fonts.gstatic.com data:",
+				"script-src": "'self'",
+				"connect-src": "ipc: http://ipc.localhost http://tauri.localhost",
+				"media-src": "'self' asset: http://asset.localhost"
+			},
+			"assetProtocol": {
+				"enable": true,
+				"scope": ["$CONFIG"]
+			}
     }
   },
   "bundle": {
